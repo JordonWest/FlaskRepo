@@ -1,0 +1,20 @@
+<html>
+    <h1>THINGS THAT CLAY CANNOT COOK</h1>
+    <table>
+    {% for food in foods %}
+        <tr>
+            <th>
+                <td>{{food.name}}</td>
+            </th>
+        </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <h3>Add another food that Clay cannot cook</h3>
+    <form action='/add_food' method="POST">
+        <input type="text" name="name", placeholder="food name">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="/">return to main page</a>
+</html>
